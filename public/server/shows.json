@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "showName": "Gitex 2017",
+        "city": "37th Gitex Technology Week",
+        "state": "North Carolina",
+        "date": "2018-04-06",
+        "contact": "John Cook"
+    },
+    {
+        "id": 2,
+        "showName": "Gulfood",
+        "city": "Jersey City",
+        "state": "New Jersey",
+        "date": "2017-03-06",
+        "contact": "Jane Doe"
+    },
+    {
+        "id": 3,
+        "showName": "Pulvinar Pharetra",
+        "city": "Baltimore",
+        "state": "Maryland",
+        "date": "2017-02-27",
+        "contact": "Owen Hayden"
+    },
+    {
+        "id": 4,
+        "showName": "Euismod Natoque",
+        "city": "Montpelier",
+        "state": "Vermont",
+        "date": "2017-02-27",
+        "contact": "Javion Walker"
+    },
+    {
+        "id": 5,
+        "showName": "Sagittis Phasellus",
+        "city": "Dallas",
+        "state": "Texas",
+        "date": "2017-02-2",
+        "contact": "Jaylin Mcgowan"
+    },
+    {
+        "id": 6,
+        "showName": "Varius Ridiculus",
+        "city": "Los Angeles",
+        "state": "California",
+        "date": "2017-02-2",
+        "contact": "Joey White"
+    }
+]

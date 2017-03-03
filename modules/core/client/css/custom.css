@@ -1,0 +1,32 @@
+.navbar.topnavbar .navbar-brand .brand-logo {
+  padding-top: 7px; }
+
+.navbar.topnavbar .navbar-brand .brand-logo h4, .navbar.topnavbar .navbar-brand .brand-logo-collapsed {
+  color: #fff; }
+
+.navbar.topnavbar .nav-wrapper {
+  background-color: #fff;
+  background-image: none; }
+
+.navbar.topnavbar .navbar-nav li a {
+  color: #406e9e; }
+
+.navbar.topnavbar .navbar-nav li a em.icon-notebook {
+  display: none; }
+
+.navbar.topnavbar .navbar-header .brand-logo img {
+  max-width: 130px;
+  display: none; }
+
+.navbar-nav li a span {
+  padding-left: 10px; }
+
+@media only screen and (min-width: 768px) {
+  .navbar.topnavbar .navbar-header .brand-logo img {
+    display: block; }
+  .navbar.topnavbar .navbar-header .brand-logo h4 {
+    display: none; } }
+
+@media only screen and (min-width: 700px) {
+  .navbar-nav li a span {
+    padding-left: 0; } }

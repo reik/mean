@@ -1,0 +1,55 @@
+<h3>
+    <!-- START Language list-->
+    <div class="pull-right">
+        <div uib-dropdown="" is-open="language.listIsOpen" class="btn-group">
+            <button type="button" uib-dropdown-toggle="" class="btn btn-default">{{language.selected}}
+            <span class="caret"></span>
+         </button>
+            <ul role="menu" class="dropdown-menu dropdown-menu-right animated fadeInUpShort">
+                <li ng-repeat="(localeId, langName) in language.available"><a ng-click="language.set(localeId, $event)">{{langName}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- END Language list    -->
+    Show List
+    <small>{{ 'dashboard.WELCOME' | translate:{ appName: app.name } }} !</small>
+</h3>
+
+<!-- ngRepeat + ngResource-->
+<div class="panel panel-default">
+   <div class="panel-heading">
+   </div>
+   <div class="panel-body">
+      <div ng-controller="DataTableController as table1">
+         <table datatable="ng" class="row-border hover" dt-options="table1.dtOptions">
+            <thead>
+               <tr>
+                  <th>Show Name</th>
+                  <th>Start Date</th>
+                  <th>End Date</th>
+                  <th>Description</th>
+                  <th>Contact</th>
+                  <th>Email</th>
+                  <th>Phone Number</th>                  
+                  <th>Brochure Name</th>
+                  <th></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr ng-repeat="show in table1.shows">                  
+                  <td>{{ show['Show Name'] }}</td>
+                  <td>{{ show['Start Date'] }}</td>
+                  <td>{{ show['End Date'] }}</td>
+                  <td>{{ show['Description'] }}</td>                  
+                  <td>{{ show['Name'] }}</td>
+                  <td>{{ show['E-mail'] }}</td>
+                  <td>{{ show['Phone Number'] }}</td>
+                  <td>{{ show['Brochure Name'] }}</td>                 
+                  <td><button class="btn btn-danger" ng-click="table1.remove(show)">Delete</button></td>                 
+               </tr>
+            </tbody>
+         </table>
+      </div>
+   </div>
+</div>

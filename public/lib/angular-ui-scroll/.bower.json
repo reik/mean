@@ -1,0 +1,46 @@
+{
+  "name": "angular-ui-scroll",
+  "description": "AngularJS infinite scrolling module",
+  "version": "1.6.0",
+  "main": "./dist/ui-scroll.js",
+  "homepage": "https://github.com/angular-ui/ui-scroll.git",
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "angularjs",
+    "angular.ui",
+    "angular-ui",
+    "ui.scroll",
+    "ui-scroll",
+    "angular-ui-scroll",
+    "unlimited",
+    "infinite",
+    "live",
+    "perpetual",
+    "scroll",
+    "scroller",
+    "scrolling"
+  ],
+  "ignore": [
+    "node_modules",
+    "src",
+    "temp",
+    "test",
+    ".gitignore",
+    ".jshintrc",
+    ".npmignore",
+    ".travis.yml",
+    "Gruntfile.js",
+    "package.json",
+    "webpack.config.js"
+  ],
+  "_release": "1.6.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.6.0",
+    "commit": "af70cc576a0a1a2ba6becc5af894d9af553d0c1c"
+  },
+  "_source": "https://github.com/angular-ui/ui-scroll.git",
+  "_target": "*",
+  "_originalSource": "angular-ui-scroll"
+}

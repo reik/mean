@@ -1,0 +1,76 @@
+.navbar.topnavbar {  
+  .navbar-brand{
+    .brand-logo{
+      padding-top: 7px;
+    }
+    .brand-logo h4, .brand-logo-collapsed{
+      color: #fff;
+    }
+  }
+
+  .nav-wrapper{
+    background-color: #fff;
+    background-image: none;
+  }
+
+  .navbar-nav{
+     li a{
+       color: #406e9e;
+     }
+
+     li a{
+       em.icon-notebook{
+         display:none;
+       }
+     }
+  }
+
+  .navbar-header{
+     .brand-logo{
+       img{
+         max-width: 130px;
+         display: none;
+       }
+     }
+  }
+
+
+}
+
+
+.navbar-nav{
+    li a span{
+      padding-left: 10px;
+    }
+}
+
+
+@media only screen and (min-width: 768px) {  
+  .navbar.topnavbar {   
+    .navbar-header{
+      .brand-logo{
+        img{          
+          display: block;
+        }
+        h4{
+          display: none;
+        }
+      }
+    }   
+  }
+}
+
+
+
+
+@media only screen and (min-width: 700px) {
+  .navbar-nav{
+    li a span{
+      padding-left: 0;
+    }
+  }
+}
+
+
+
+

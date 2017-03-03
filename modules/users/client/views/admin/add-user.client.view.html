@@ -1,0 +1,93 @@
+<h3>
+    <!-- START Language list-->
+    <div class="pull-right">
+        <div uib-dropdown="" is-open="language.listIsOpen" class="btn-group">
+            <button type="button" uib-dropdown-toggle="" class="btn btn-default">{{language.selected}}
+            <span class="caret"></span>
+         </button>
+            <ul role="menu" class="dropdown-menu dropdown-menu-right animated fadeInUpShort">
+                <li ng-repeat="(localeId, langName) in language.available"><a ng-click="language.set(localeId, $event)" href="#">{{langName}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- END Language list    -->
+    Add A Single User
+    <small>{{ 'dashboard.WELCOME' | translate:{ appName: app.name } }} !</small>
+</h3>
+
+<div class="panel b">
+    <div class="panel-heading bg-gray-lighter text-bold"></div>
+    <div class="panel-body">
+        <form name="userForm" ng-submit="save(userForm.$valid)" novalidate autocomplete="off">
+
+            <div class="form-group" show-errors>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" class="form-control" ng-model="newUser.email" placeholder="Email" lowercase required>
+                <div ng-messages="userForm.email.$error" role="alert">
+                    <p class="help-block error-text" ng-message="required">Email address is required.</p>
+                    <p class="help-block error-text" ng-message="email">Email address is invalid.</p>
+                </div>
+            </div>
+
+            <div class="form-group" show-errors>
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" class="form-control" ng-model="newUser.firstName" placeholder="First Name"
+                    required />
+                <div ng-messages="userForm.firstName.$error" role="alert">
+                    <p class="help-block error-text" ng-message="required">First name is required.</p>
+                </div>
+            </div>
+
+            <div class="form-group" show-errors>
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" class="form-control" ng-model="newUser.lastName" placeholder="Last Name"
+                    required>
+                <div ng-messages="userForm.lastName.$error" role="alert">
+                    <p class="help-block error-text" ng-message="required">Last name is required.</p>
+                </div>
+            </div>
+
+            <div class="form-group" show-errors>
+                <label for="lastName">Company</label>
+                <input type="text" id="company" name="company" class="form-control" ng-model="newUser.company" placeholder="Company" required>
+                <div ng-messages="userForm.lastName.$error" role="alert">
+                    <p class="help-block error-text" ng-message="required">Company is required.</p>
+                </div>
+            </div><br />
+
+            <div class="form-group" show-errors>
+                <label class="control-label" for="priceGroup">Price Group</label>
+                <select ng-change="setPriceGroup()" class="form-control" name="priceGroup" id="priceGroup" ng-model="newUser.priceGroup" required>
+                    <option value="">---Please select---</option> 
+                    <option ng-repeat="group in priceGroups" value="{{group}}">{{group}}</option>
+                </select>
+                <div ng-messages="userForm.priceGroup.$error" role="alert">
+                    <p class="help-block error-text" ng-message="required">A price group is required.</p>
+                </div>
+            </div><br />
+
+            <div class="form-group">
+                <label class="control-label" for="roles">Roles</label>
+                <ui-select multiple="" id="roles" name="roles" ng-model="newUser.roles" theme="bootstrap" ng-disabled="disabled">
+                    <ui-select-match placeholder="Select roles...">{{$item}}</ui-select-match>
+                    <ui-select-choices repeat="role in roles | filter:$select.search">{{role}}</ui-select-choices>
+                </ui-select>
+            </div><br>            
+
+            <button type="submit" class="btn btn-info">Save</button>
+
+            <br><br>
+
+            <div class="alert alert-success alert-dismissible" ng-show="success">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close" ng-click="success = false">&times;</a>                Updated successfully.
+            </div>
+
+            <div ng-show="error" class="alert alert-danger alert-dismissible">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close" ng-click="error = false">&times;</a>
+                <strong ng-bind="error"></strong>
+            </div>
+
+        </form>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="panel b" ng-controller="ChangeProfilePictureController">
+  <div class="panel-heading bg-gray-lighter text-bold">Change Profile Picture</div>
+  <div class="panel-body">
+    <form>
+      <div class="form-group">
+        <img ng-src="{{imageURL}}" alt="{{user.displayName}}" class="img-thumbnail user-profile-picture">
+      </div>
+      <hr>
+      <br>
+      <div class="form-group">
+        <label>Select new picture:</label>
+        <input filestyle="" type="file" data-input="false" data-classbutton="btn btn-default" data-classinput="form-control inline"
+          data-button-text="Upload new picture" data-icon-name="fa fa-upload mr" class="form-control" nv-file-select uploader="uploader" />
+      </div>
+
+      <div class="text-center form-group" ng-show="uploader.queue.length">
+        <button class="btn btn-primary" ng-click="uploadProfilePicture();">Upload</button>
+        &nbsp;<button class="btn btn-default" ng-click="cancelUpload();">Cancel</button>
+      </div>
+
+      <br><br>
+      
+      <div class="alert alert-success alert-dismissible" ng-show="success">
+         <a href="#" class="close" data-dismiss="alert" aria-label="close" ng-click="success = false">&times;</a>
+         Profile picture updated successfully.         
+      </div>
+
+      <div ng-show="error" class="alert alert-danger alert-dismissible">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close" ng-click="error = false">&times;</a>
+        <strong ng-bind="error"></strong>
+      </div>
+      
+    </form>
+  </div>
+</div>

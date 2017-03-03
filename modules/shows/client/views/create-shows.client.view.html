@@ -1,0 +1,78 @@
+<h3>
+    <!-- START Language list-->
+    <div class="pull-right">
+
+        <div uib-dropdown="" is-open="language.listIsOpen" class="btn-group">
+            <button type="button" uib-dropdown-toggle="" class="btn btn-default">{{language.selected}}
+            <span class="caret"></span>
+         </button>
+            <ul role="menu" class="dropdown-menu dropdown-menu-right animated fadeInUpShort">
+                <li ng-repeat="(localeId, langName) in language.available"><a ng-click="language.set(localeId, $event)">{{langName}}</a>
+                </li>
+            </ul>
+        </div>       
+    </div>
+    <!-- END Language list    -->
+    Create Show
+    <small>{{ 'dashboard.WELCOME' | translate:{ appName: app.name } }} !</small>
+</h3>
+
+
+<iframe scrolling="no" src="https://form.jotform.com/63495853120154" width="100%" style="height: 100vh;"
+    frameBorder="0"></iframe>
+<!--<div class="table-grid todo">
+
+    <div class="col-sm-5">
+        <div class="pr-lg">
+            <form class="mb-xl" ng-submit="todo.save()">
+                <div class="form-group">
+                    <input class="form-control" ng-trim="true" type="text" ng-model="todo.todo.name" placeholder="Name...." required="required"
+                    />
+                </div>
+                <div class="form-group">
+                    <input readonly placeholder="Select a date..." class="form-control" type="text" name="date" required="" uib-datepicker-popup="{{todo.format}}"
+                        ng-model="todo.todo.date" is-open="todo.opened" min-date="todo.minDate" max-date="'2019-12-22'" uib-datepicker-options="todo.dateOptions"
+                        close-text="Close" />
+                    <span>
+                        <button class="btn btn-default" type="button" ng-click="todo.open($event)">
+                        <em class="fa fa-calendar"></em>
+                        </button>
+                    </span>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" ng-trim="true" type="text" ng-model="todo.todo.city" placeholder="City...." required="required"
+                    />
+                </div>
+                <div class="form-group">
+                    <input class="form-control" ng-trim="true" type="text" ng-model="todo.todo.state" placeholder="State...." required="required"
+                    />
+                </div>
+                <div class="form-group">
+                    <input class="form-control" ng-trim="true" type="text" ng-model="todo.todo.contact" placeholder="Contact...." required="required"
+                    />
+                </div>
+                <button class="btn btn-primary btn-block" type="submit">{{todo.editingTodo ? 'Edit Show' : 'Create Show'}}</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="col-sm-7 todo-item-list">
+        <div class="lead text-muted text-center" ng-show="!todo.items.length">No shows...</div>
+        <uib-accordion close-others="true">
+            <div class="todo-item" uib-accordion-group="uib-accordion-group" ng-repeat="item in todo.items" is-disabled="item.complete">
+                <uib-accordion-heading ng-class="{'todo-complete': item.complete}">
+                    <span class="close" ng-click="todo.delete($index, $event)">×</span>                   
+                    <span class="todo-title text-primary lead" ng-bind="item.name"></span>
+                    <span class="todo-edit fa fa-pencil" ng-click="todo.editTodo($index, $event)"></span>
+                    <br><span>Date: <span>{{ item.date | date :  "dd-MMMM-yyyy" }}</span></span>
+                    <br><span>City: <span ng-bind="item.city"></span></span>
+                    <br><span>State: <span ng-bind="item.state"></span></span>
+                    <br><span>Contact: <span ng-bind="item.contact"></span></span>
+                    <hr ng-hide="$last">
+                    <br ng-show="$last">
+                    <br ng-show="$last">
+                </uib-accordion-heading>
+            </div>
+        </uib-accordion>
+    </div>
+</div>-->
